@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landingPage');
 });
+
+Auth::routes();
+
+Route::get('/admin', 'HomeController@index')->name('home');
+//Route::post('/adduser', 'HomeController@postUser');
+

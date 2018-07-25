@@ -39,6 +39,19 @@ if (token) {
 
 
 
-const app = new Vue({
-    el: '#app'
-});
+import Vue    from 'vue';
+
+import router from './routes.js'
+
+import store from './store.js'
+
+// import axios from 'axios'
+//
+// import VueAxios from 'vue-axios'
+//
+// Vue.use(VueAxios, axios)
+
+new Vue({
+        router,
+    store
+    }).$mount('#app');
