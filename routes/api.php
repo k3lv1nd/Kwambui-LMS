@@ -17,7 +17,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('');
 
 Route::post('/adduser', 'HomeController@postUser');
 Route::get('/getusers', 'HomeController@getAll');
+Route::get('/getloggedinuser', 'HomeController@getLoggedInUser');
+Route::post('/loanrequest', 'LoanController@store');
+Route::get('/getuserloans', 'LoanController@getemployeeLoans');

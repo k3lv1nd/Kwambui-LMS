@@ -14,19 +14,18 @@
 </head>
 <body>
 <div class="ontop">
-    <ul class="navigation menu menu-centered expanded">
-        <li class="menu-text show-for-medium">Loan Mamagement System</li>
-
-        <li><a href="#">Pictures</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+@include('partials.navbar')
 
 </div>
 <div class="welcome">
-    <h1>Welcome To the Loan Mamagement System</h1>
-
+    <h1>Welcome To the Loan Management System</h1>
+    <br>
+    <br>
+    @auth
+        <a href="{{route('home')}}"  class="loggedin">You Already Signed In, Click to Go home</a>
+    @else
     <a href="{{route('login')}}" class="button">Sign in</a>
-
+    @endauth
 
 </div>
 

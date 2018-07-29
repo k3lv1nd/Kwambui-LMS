@@ -41,7 +41,7 @@
                 <tr >
                     <td>{{user.name}}</td>
                     <td>{{user.email}}</td>
-                    <td>{{user.role}}</td>
+                    <td>{{user.role }}</td>
                     <td>{{user.date}}</td>
                 </tr>
 
@@ -51,8 +51,7 @@
 </template>
 
 <script>
-    import users from '../api/users.js';
-    import {LMS_CONFIG} from '../config.js'
+
     import AddUser from '../components/AddUser.vue'
 
     export default {

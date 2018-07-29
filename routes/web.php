@@ -17,6 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('home');
-//Route::post('/adduser', 'HomeController@postUser');
+Route::get('/dashboard', 'HomeController@index')->name('home');
+Route::get('/login',function (){
+    return view('auth.login');
+})->name('login');
+Route::get('/getloggedinuser', 'HomeController@getLoggedInUserRole');
+Route::get('/getuserdetails', 'HomeController@getCurrentUserDetails');
+Route::get('/getdepartmentusers', 'LoanController@getDepartmentUsers');
+Route::get('/getuserloans', 'LoanController@getemployeeLoans');
+
 

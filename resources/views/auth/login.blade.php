@@ -5,7 +5,7 @@
     <div class="grid-x row login">
         <div class="large-4">
 
-                <div >{{ __('Login') }}</div>
+                <div class="logintitle">{{ __('Login') }}</div>
 
                 <div >
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
@@ -38,28 +38,15 @@
                                 @endif
                             </div>
                         </div>
-
-                        <div class=" row">
-                            <div class="large-6">
-                                <div >
-                                    <input  type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label  for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class=" row ">
                             <div class="">
                                 <button type="submit" class="button">
                                     {{ __('Login') }}
                                 </button>
 
-                                <a class="button" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
+                                {{--<a class="button" href="{{ route('password.request') }}">--}}
+                                    {{--{{ __('Forgot Your Password?') }}--}}
+                                {{--</a>--}}
                             </div>
                         </div>
                     </form>

@@ -18,28 +18,13 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 </head>
-<body>
-    <div >
-        <div class="ontop">
-            <ul class="navigation menu menu-centered expanded">
-                <li class="menu-text show-for-medium">Loan Management System</li>
-                <li><a class="dropdown-item" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form></li>
-
-                <li><a href="#">Pictures</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-
-        </div>
+<body style="background-color: ghostwhite; ">
+    <div>
+        @include('partials.navbar')
 
 
 
@@ -50,6 +35,10 @@
     <script src="{{ asset('js/app.js') }}" ></script>
     <script>
         $(document).foundation();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
     </script>
 </body>
 </html>

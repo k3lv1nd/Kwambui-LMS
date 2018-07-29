@@ -6,14 +6,14 @@
 }
 .welcome
 {
-  height: 670px;
+  height: 1000px;
     background-image: url("../images/employee-loan.jpeg");
     background-size: cover;
     text-align: center;
     color: $white;
   }
 .button{
-  width: 150px;
+
 }
 .login {
 justify-content: center;
@@ -26,5 +26,43 @@ justify-content: center;
   width: 200px;
   margin-left: 2%;
 }
+a.logout{
+  color: #2b2828;
+  float: right;
+  margin-right: 10%;
+  margin-top: 1.5%;
+  font-weight: 500;
+  padding: 9px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+a.loggedin{
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+a.loggedin:hover{
+  background-color: #34b5dcfa;
+  color: #fff;
+}
 
+li.appname{
+  margin-left: 5%;
+  margin-top: 5px;
+  font-size: 25px;
+}
+div.logintitle{
+  font-size: 35px;
+  text-align: center;
+  margin: 10px;
+  /* text-transform: uppercase; */
+  color: #3490dc;
+}
 
+div.role_unavailable{
+  text-align: center;
+  margin: 50px;
+  font-size: 30px;
+  color: green;
+}
