@@ -10,7 +10,7 @@ use App\User_role;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
-//use App\Http\Controllers\Auth;
+
 
 
 class HomeController extends Controller
@@ -24,7 +24,6 @@ class HomeController extends Controller
     //User model injected
     public function __construct(User $user)
     {
-//        $this->middleware('auth');
 
         $this->user = $user;
     }
@@ -36,7 +35,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(!Auth::user()){
+        if(!Auth::user())
+        {
             return redirect('/login');
         }
         $user= User::where('id',Auth::user()->id)->first();
@@ -56,14 +56,14 @@ class HomeController extends Controller
         }
 
     }
-    //get user details: remember to combine  with getLoggedIn user/ Should be a single query to get all user details
+
     public function getCurrentUserDetails ()
     {
         return $user = User::where('id',Auth::user()->id)->first();
     }
 
 
-    //add User
+    //add User and send mail notification
     public function postUser (Request $request)
     {
         $user = $this->user ;
@@ -114,7 +114,6 @@ class HomeController extends Controller
     //get all users
     public function getAll()
     {
-//        return User::with(['roles'])->get();
         return User::all()->map( function ($user) {
 
             return [

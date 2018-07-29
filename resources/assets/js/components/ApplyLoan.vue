@@ -9,6 +9,7 @@
 
                 },
                 amount: '',
+                duration: ''
 
             }
 
@@ -17,8 +18,11 @@
             amount: {
                 handler: function () {
                     this.loandetails.amount = this.amount;
+                    this.loandetails.duration =this.duration;
                    let amount = parseInt(this.amount);
-                   let ineterest = amount * 0.1;
+                    let duration = parseInt(this.duration);
+
+                   let ineterest = amount * 0.1 * duration;
                     this.loandetails.intrest = ineterest;
                 }
             }
@@ -103,7 +107,7 @@
                   <label for="Loanduration" class="right" >Duration</label>
               </div>
               <div class="small-6 columns">
-                  <input type="number" placeholder="Duration in months" v-model="loandetails.duration" >
+                  <input type="number" placeholder="Duration in months" v-model="duration" >
               </div>
           </div>
           <div class="row">

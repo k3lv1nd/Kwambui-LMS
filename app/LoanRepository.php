@@ -33,7 +33,6 @@ class LoanRepository {
             ->select('users.*','user_role.role_id')
             ->take(1)->get()->toArray();
 
-
         $name=$approver[0]->name;
         $email=$approver[0]->email;
 
@@ -96,7 +95,7 @@ class LoanRepository {
 
     public function DepartmentLoanApproval($data){
         $loan_id=$data['id'];
-        //for departmental approval update status to 1
+        //for departmental approval update status to ABD
         //ABD=Approved By Department
         $hr_approver=User::where('department_id','2')->whereHas('roles',function($role){
             $role->where('name','approver');
@@ -133,12 +132,13 @@ class LoanRepository {
 
     public function DepartmentLoanRejection($data){
         $loan_id=$data['id'];
-        //for departmental approval update status to 1
-        //DBD=Declined By Department
+
         $update= Loan::where('id',$loan_id)->update(['status'=>'DBD']);
-        if($update){
+        if($update)
+        {
             return responnse()->json(['status'=>'success','message'=>'Loan Successfully Rejected At Department Level']);
-        }else{
+        }
+        else{
             return responnse()->json(['status'=>'error','message'=>'System Error, At Departmental Approval Level']);
         }
     }
