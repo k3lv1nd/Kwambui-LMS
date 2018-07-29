@@ -4,7 +4,7 @@
             <div class="holy-grail-left ">
                 <h5 class="header">Employee dashboard</h5>
                 <ul >
-                    <li class="links" ><i class="fa fa-money" aria-hidden="true"></i><a class="routes" @click="()=>{this.dynamiccomponent='Loans'}">Loans</a></li>
+                    <li class="links" ><a class="routes" @click="()=>{this.dynamiccomponent='Loans'}">Loans</a></li>
                     <li class="links"><a class="routes" @click="()=>{this.dynamiccomponent='LoanCalculator'}">LoansCalculator</a></li>
 
                 </ul>

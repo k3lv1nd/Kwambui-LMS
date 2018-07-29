@@ -46,11 +46,16 @@
                         status: '0'
                     }
                 ).then( function (response) {
-                    console.log(response);
-
+                    if (response.status=='success'){
+                        toastr.success(response.message);
                     }
-
-                )
+                    if (response.status=='error'){
+                        toastr.error(response.message);
+                    }
+                    setTimeout(()=>{
+                        location.reload();
+                    },1000);
+                    });
 
 
 

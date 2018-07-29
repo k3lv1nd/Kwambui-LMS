@@ -34,6 +34,8 @@
                 <th>Email</th>
                 <th width="">Role</th>
                 <th width="s">Date of registration</th>
+                <th width="s">Edit</th>
+                <th width="s">Delete</th>
             </tr>
             </thead>
             <tbody v-for="user in users">
@@ -43,6 +45,9 @@
                     <td>{{user.email}}</td>
                     <td>{{user.role }}</td>
                     <td>{{user.date}}</td>
+                    <td><button type="button" class="success button" >Edit</button></td>
+                    <td><button type="button" class="alert button" >Delete</button></td>
+
                 </tr>
 
             </tbody>

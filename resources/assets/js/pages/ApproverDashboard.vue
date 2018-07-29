@@ -34,13 +34,10 @@
         },
 
         components: {
-
             LoanRequests
 
-
-
-
         },
+
 
     }
 

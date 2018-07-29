@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Iam the loans claculator component</h3>
+
     </div>
 </template>
 

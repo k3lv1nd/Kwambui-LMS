@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Loan;
 use App\LoanRepository;
 use Illuminate\Http\Request;
 
@@ -111,5 +112,15 @@ class LoanController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function ApproverGetLoansRequests()
+    {
+         return $this->loanrepository->GetLoansForApproval();
+    }
+    public function DepartmentLoanApproval(Request $request){
+        return $this->loanrepository->DepartmentLoanApproval($request->all());
+    }
+    public function DepartmentLoanRejection(Request $request){
+        return $this->loanrepository->DepartmentLoanRejection($request->all());
     }
 }

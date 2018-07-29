@@ -26,4 +26,7 @@ Route::get('/getuserdetails', 'HomeController@getCurrentUserDetails');
 Route::get('/getdepartmentusers', 'LoanController@getDepartmentUsers');
 Route::get('/getuserloans', 'LoanController@getemployeeLoans');
 
+Route::get('/loanRequests','LoanController@ApproverGetLoansRequests');
 
+Route::post('/approveLoan','LoanController@DepartmentLoanApproval');
+Route::post('/rejectLoan','LoanController@DepartmentLoanRejection');
